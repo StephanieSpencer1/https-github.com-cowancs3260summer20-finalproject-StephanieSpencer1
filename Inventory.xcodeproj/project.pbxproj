@@ -15,6 +15,8 @@
 		09F98FAD24A28F0F004ACC12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09F98FAB24A28F0F004ACC12 /* LaunchScreen.storyboard */; };
 		09F98FB824A28F0F004ACC12 /* InventoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F98FB724A28F0F004ACC12 /* InventoryTests.swift */; };
 		09F98FC324A28F0F004ACC12 /* InventoryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F98FC224A28F0F004ACC12 /* InventoryUITests.swift */; };
+		09F98FD124A28FE5004ACC12 /* Jenkinsfile in Resources */ = {isa = PBXBuildFile; fileRef = 09F98FD024A28FE5004ACC12 /* Jenkinsfile */; };
+		09F98FD324A28FF1004ACC12 /* InventoryUITestsCS3260.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F98FD224A28FF1004ACC12 /* InventoryUITestsCS3260.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		09F98FBE24A28F0F004ACC12 /* InventoryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InventoryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		09F98FC224A28F0F004ACC12 /* InventoryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryUITests.swift; sourceTree = "<group>"; };
 		09F98FC424A28F0F004ACC12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09F98FD024A28FE5004ACC12 /* Jenkinsfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Jenkinsfile; sourceTree = "<group>"; };
+		09F98FD224A28FF1004ACC12 /* InventoryUITestsCS3260.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryUITestsCS3260.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,7 @@
 		09F98F9424A28F0C004ACC12 = {
 			isa = PBXGroup;
 			children = (
+				09F98FD024A28FE5004ACC12 /* Jenkinsfile */,
 				09F98F9F24A28F0C004ACC12 /* Inventory */,
 				09F98FB624A28F0F004ACC12 /* InventoryTests */,
 				09F98FC124A28F0F004ACC12 /* InventoryUITests */,
@@ -122,6 +127,7 @@
 		09F98FC124A28F0F004ACC12 /* InventoryUITests */ = {
 			isa = PBXGroup;
 			children = (
+				09F98FD224A28FF1004ACC12 /* InventoryUITestsCS3260.swift */,
 				09F98FC224A28F0F004ACC12 /* InventoryUITests.swift */,
 				09F98FC424A28F0F004ACC12 /* Info.plist */,
 			);
@@ -233,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				09F98FAD24A28F0F004ACC12 /* LaunchScreen.storyboard in Resources */,
+				09F98FD124A28FE5004ACC12 /* Jenkinsfile in Resources */,
 				09F98FAA24A28F0F004ACC12 /* Assets.xcassets in Resources */,
 				09F98FA824A28F0C004ACC12 /* Main.storyboard in Resources */,
 			);
@@ -278,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				09F98FC324A28F0F004ACC12 /* InventoryUITests.swift in Sources */,
+				09F98FD324A28FF1004ACC12 /* InventoryUITestsCS3260.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
