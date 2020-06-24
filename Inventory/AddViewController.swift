@@ -8,14 +8,25 @@
 
 import UIKit
 
+protocol AddItemProtocol{
+    func getTitles()
+}
+
 class AddViewController: UIViewController {
+  
+    var AddItemProtocol: AddItemProtocol?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let save = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(saveItem))
+        self.navigationItem.rightBarButtonItem = save
         // Do any additional setup after loading the view.
     }
     
+    @objc func saveItem(){
+        //set up and call the function specified by the protocol
+        self.navigationController?.popViewController(animated: true)
+    }
 
     /*
     // MARK: - Navigation

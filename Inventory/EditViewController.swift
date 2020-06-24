@@ -8,14 +8,30 @@
 
 import UIKit
 
+
+protocol EditItemProtocol{
+    func modTitles()
+}
+
 class EditViewController: UIViewController {
 
+    
+    var EditItemProtocol: EditItemProtocol?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        let save = UIBarButtonItem(barButtonSystemItem: .save, target: sefl, action: #selector(saveItem))
+        self.navigationItem.rightBarButtonItem = save
+        
 
         // Do any additional setup after loading the view.
     }
     
+    @objc func saveItem(){
+           //set up and call the function specified by the protocol
+           self.navigationController?.popViewController(animated: true)
+       }
 
     /*
     // MARK: - Navigation
