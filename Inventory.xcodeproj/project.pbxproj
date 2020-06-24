@@ -17,6 +17,8 @@
 		09F98FC324A28F0F004ACC12 /* InventoryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F98FC224A28F0F004ACC12 /* InventoryUITests.swift */; };
 		09F98FD124A28FE5004ACC12 /* Jenkinsfile in Resources */ = {isa = PBXBuildFile; fileRef = 09F98FD024A28FE5004ACC12 /* Jenkinsfile */; };
 		09F98FD324A28FF1004ACC12 /* InventoryUITestsCS3260.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F98FD224A28FF1004ACC12 /* InventoryUITestsCS3260.swift */; };
+		09F98FDB24A29F1D004ACC12 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F98FDA24A29F1D004ACC12 /* EditViewController.swift */; };
+		09F98FDD24A29F4A004ACC12 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F98FDC24A29F4A004ACC12 /* AddViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		09F98FC424A28F0F004ACC12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09F98FD024A28FE5004ACC12 /* Jenkinsfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Jenkinsfile; sourceTree = "<group>"; };
 		09F98FD224A28FF1004ACC12 /* InventoryUITestsCS3260.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryUITestsCS3260.swift; sourceTree = "<group>"; };
+		09F98FDA24A29F1D004ACC12 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		09F98FDC24A29F4A004ACC12 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,9 +112,11 @@
 				09F98FA224A28F0C004ACC12 /* SceneDelegate.swift */,
 				09F98FA424A28F0C004ACC12 /* ViewController.swift */,
 				09F98FA624A28F0C004ACC12 /* Main.storyboard */,
+				09F98FDA24A29F1D004ACC12 /* EditViewController.swift */,
 				09F98FA924A28F0F004ACC12 /* Assets.xcassets */,
 				09F98FAB24A28F0F004ACC12 /* LaunchScreen.storyboard */,
 				09F98FAE24A28F0F004ACC12 /* Info.plist */,
+				09F98FDC24A29F4A004ACC12 /* AddViewController.swift */,
 			);
 			path = Inventory;
 			sourceTree = "<group>";
@@ -266,6 +272,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09F98FDD24A29F4A004ACC12 /* AddViewController.swift in Sources */,
+				09F98FDB24A29F1D004ACC12 /* EditViewController.swift in Sources */,
 				09F98FA524A28F0C004ACC12 /* ViewController.swift in Sources */,
 				09F98FA124A28F0C004ACC12 /* AppDelegate.swift in Sources */,
 				09F98FA324A28F0C004ACC12 /* SceneDelegate.swift in Sources */,
