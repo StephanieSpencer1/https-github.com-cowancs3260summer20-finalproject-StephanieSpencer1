@@ -14,15 +14,16 @@ protocol EditItemProtocol{
 }
 
 class EditViewController: UIViewController {
-  
+
     
     var delegate: EditItemProtocol!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let save = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(saveItem))
+        let save = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(handleSave))
         self.navigationItem.rightBarButtonItem = save
+        
         
 
         // Do any additional setup after loading the view.
@@ -33,7 +34,7 @@ class EditViewController: UIViewController {
     
     @IBOutlet weak var longField: UITextView!
     
-    @objc func saveItem(){
+    @objc func handleSave(){
         //set up and call the function specified by the protocol
         let short: String = shortField.text!
         let long: String = longField.text

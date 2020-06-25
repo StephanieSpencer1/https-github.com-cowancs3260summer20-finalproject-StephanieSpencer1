@@ -18,7 +18,7 @@ class AddViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let save = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(saveItem))
+        let save = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(handleSave))
         self.navigationItem.rightBarButtonItem = save
         // Do any additional setup after loading the view.
         
@@ -26,7 +26,7 @@ class AddViewController: UIViewController {
     
     @IBOutlet weak var shortDesField: UITextField!
     @IBOutlet weak var longDesField: UITextView!
-    @objc func saveItem(){
+    @objc func handleSave(){
         //set up and call the function specified by the protocol
         let short: String = shortDesField.text!
         let long: String = longDesField.text
