@@ -70,8 +70,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func editItem(_ item: Item){
-        items[itemBeingEdited].shortDescription = item.shortDescription
-        items[itemBeingEdited].longDescription = item.longDescription
+        items[itemIndex].shortDescription = item.shortDescription
+        items[itemIndex].longDescription = item.longDescription
         tableView.reloadData()
     }
     
