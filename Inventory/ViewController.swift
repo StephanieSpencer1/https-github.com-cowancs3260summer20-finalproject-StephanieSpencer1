@@ -9,25 +9,43 @@
 import UIKit
 
 struct Item {
-    var shortDerscription: String = ""
+    var shortDescription: String = ""
     var longDescription: String = ""
 }
 
+var items: [Item] = []
+
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, AddItemProtocol, EditItemProtocol {
-    func modTitles(){
-        
-    }
-    func getTitles() {
-        <#code#>
-    }
-    
+ 
+  
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        return items.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel?.text = items[indexPath.row].shortDescription
+        cell.detailTextLabel?.text = items[indexPath.row].longDescription
+        return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //edit row
+        tableView.deselectRow(at: <#T##IndexPath#>, animated: true)
+        
+    }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        //delete row
+        let deleteAction = UIContextualAction(style: .destructive, title: "Delete"){ (action:UIContextualAction, sourceView: UIView, actionPerformed:(Bool) -> Void) in
+            self.items.remove(at: indexPath.row)
+            tableView.reloadData()
+            actionPerformed(true)
+        }
+        return UISwipeActionsConfiguration(actions: [deleteAction])
+    }
+    
+    
     
     var items: [Item]! = []
     var itemIndex: Int!
@@ -42,6 +60,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             itemIndex = tableView.indexPathForSelectedRow?.row
             view.item.shortDescription = items[itemIndex].shortDescription
             view.item.longDescription = items[itemIndex].longDescription
+            editItem(items[itemIndex])
         }
     }
     

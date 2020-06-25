@@ -10,27 +10,38 @@ import UIKit
 
 
 protocol EditItemProtocol{
-    func modTitles()
+    func editItem(_ item: Item)
 }
 
 class EditViewController: UIViewController {
-
+  
     
-    var EditItemProtocol: EditItemProtocol?
+    var delegate: EditItemProtocol!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let save = UIBarButtonItem(barButtonSystemItem: .save, target: sefl, action: #selector(saveItem))
+        let save = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(saveItem))
         self.navigationItem.rightBarButtonItem = save
         
 
         // Do any additional setup after loading the view.
     }
+    //add links to text field and text box
+    
+    @IBOutlet weak var shortField: UITextField!
+    
+    @IBOutlet weak var longField: UITextView!
     
     @objc func saveItem(){
-           //set up and call the function specified by the protocol
-           self.navigationController?.popViewController(animated: true)
+        //set up and call the function specified by the protocol
+        let short: String = shortField.text!
+        let long: String = longField.text
+        var newItem = Item()
+        newItem.longDescription = long
+        newItem.shortDescription = short
+        delegate.editItem(newItem)
+        self.navigationController?.popViewController(animated: true)
        }
 
     /*

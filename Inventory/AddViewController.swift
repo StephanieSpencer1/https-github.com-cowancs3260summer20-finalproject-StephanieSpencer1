@@ -9,22 +9,31 @@
 import UIKit
 
 protocol AddItemProtocol{
-    func getTitles()
+    func addItem(_ item: Item)
 }
 
 class AddViewController: UIViewController {
   
-    var AddItemProtocol: AddItemProtocol?
+    var delegate: AddItemProtocol!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         let save = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(saveItem))
         self.navigationItem.rightBarButtonItem = save
         // Do any additional setup after loading the view.
+        
     }
     
+    @IBOutlet weak var shortDesField: UITextField!
+    @IBOutlet weak var longDesField: UITextView!
     @objc func saveItem(){
         //set up and call the function specified by the protocol
+        let short: String = shortDesField.text!
+        let long: String = longDesField.text
+        var addItem = Item()
+        addItem.longDescription = long
+        addItem.shortDescription = short
+        delegate.addItem(addItem)
         self.navigationController?.popViewController(animated: true)
     }
 
