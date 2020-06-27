@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Inventory-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Inventory" customModuleProvider="target" sceneMemberID="viewController">
@@ -48,6 +48,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="5JD-QX-U6Y"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="gYs-bC-ftT"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -59,7 +63,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Inventory" id="92z-gI-n6k">
+                    <navigationItem key="navigationItem" id="92z-gI-n6k">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Q4S-Mf-XNE">
                             <connections>
                                 <segue destination="tpr-ds-Q2Y" kind="show" identifier="addSegue" id="QJD-qy-za8"/>
@@ -79,17 +83,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="pdZ-IF-iff">
-                                <rect key="frame" x="20" y="56" width="374" height="170"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="pdZ-IF-iff">
+                                <rect key="frame" x="16" y="60" width="382" height="172"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BNs-Gf-oeT">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="34"/>
                                         <accessibility key="accessibilityConfiguration" identifier="editShortDescription"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jUJ-tC-YZy">
-                                        <rect key="frame" x="0.0" y="50" width="374" height="120"/>
+                                        <rect key="frame" x="0.0" y="52" width="382" height="120"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <accessibility key="accessibilityConfiguration" identifier="editLongDescription"/>
                                         <constraints>
@@ -100,14 +104,14 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="jUJ-tC-YZy" secondAttribute="trailing" constant="16" id="03D-aS-x1l"/>
-                                    <constraint firstItem="jUJ-tC-YZy" firstAttribute="top" secondItem="BNs-Gf-oeT" secondAttribute="bottom" constant="16" id="sBS-yX-hkh"/>
-                                    <constraint firstItem="jUJ-tC-YZy" firstAttribute="leading" secondItem="pdZ-IF-iff" secondAttribute="leading" constant="16" id="u54-Ws-0vO"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="pdZ-IF-iff" firstAttribute="top" secondItem="xf6-7y-arr" secondAttribute="top" constant="16" id="Zre-fo-LK8"/>
+                            <constraint firstItem="xf6-7y-arr" firstAttribute="trailing" secondItem="pdZ-IF-iff" secondAttribute="trailing" constant="16" id="cjf-pf-Wry"/>
+                            <constraint firstItem="pdZ-IF-iff" firstAttribute="leading" secondItem="xf6-7y-arr" secondAttribute="leading" constant="16" id="xtF-GP-a68"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="xf6-7y-arr"/>
                     </view>
                     <navigationItem key="navigationItem" id="hEK-VM-ZcM"/>
@@ -128,17 +132,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="pLx-j6-Vls">
-                                <rect key="frame" x="16" y="60" width="374" height="170"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="pLx-j6-Vls">
+                                <rect key="frame" x="16" y="60" width="382" height="170"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Aru-1B-mfn">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="34"/>
                                         <accessibility key="accessibilityConfiguration" identifier="addShortDescription"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="VyT-bb-02c">
-                                        <rect key="frame" x="0.0" y="50" width="374" height="120"/>
+                                        <rect key="frame" x="0.0" y="50" width="382" height="120"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <accessibility key="accessibilityConfiguration" identifier="addLongDescription"/>
                                         <constraints>
@@ -149,14 +153,14 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="VyT-bb-02c" firstAttribute="leading" secondItem="pLx-j6-Vls" secondAttribute="leading" constant="16" id="7ss-wd-mji"/>
-                                    <constraint firstAttribute="trailing" secondItem="VyT-bb-02c" secondAttribute="trailing" constant="16" id="WUS-5T-Z8V"/>
-                                    <constraint firstItem="VyT-bb-02c" firstAttribute="top" secondItem="Aru-1B-mfn" secondAttribute="bottom" constant="16" id="q4D-YE-Uyt"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="pLx-j6-Vls" firstAttribute="leading" secondItem="WvL-l2-wri" secondAttribute="leading" constant="16" id="2fm-P6-93u"/>
+                            <constraint firstItem="WvL-l2-wri" firstAttribute="trailing" secondItem="pLx-j6-Vls" secondAttribute="trailing" constant="16" id="56K-pH-wNn"/>
+                            <constraint firstItem="pLx-j6-Vls" firstAttribute="top" secondItem="WvL-l2-wri" secondAttribute="top" constant="16" id="lgy-tV-gUf"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="WvL-l2-wri"/>
                     </view>
                     <navigationItem key="navigationItem" id="eUw-VC-F1A"/>

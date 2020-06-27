@@ -13,6 +13,9 @@ struct Item {
     var longDescription: String = ""
 }
 
+
+
+
 var items: [Item] = []
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, AddItemProtocol, EditItemProtocol {
@@ -62,6 +65,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             view.item.longDescription = items[itemIndex].longDescription
             editItem(items[itemIndex])
         }
+        
     }
     
     func addItem(_ item: Item){
@@ -79,7 +83,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
         self.navigationItem.title = "Inventory"
         // Do any additional setup after loading the view.
-        
+       
     }
     
 

@@ -20,6 +20,7 @@ class AddViewController: UIViewController {
         super.viewDidLoad()
         let save = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(handleSave))
         self.navigationItem.rightBarButtonItem = save
+        self.navigationItem.title = "Add New Item"
         // Do any additional setup after loading the view.
         
     }
