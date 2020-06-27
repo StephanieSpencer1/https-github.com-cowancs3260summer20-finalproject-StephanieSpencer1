@@ -62,8 +62,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             let view = segue.destination as! EditViewController
             view.delegate = self
             itemIndex = tableView.indexPathForSelectedRow?.row
-            //view.shortDescription = items[itemIndex].shortDescription
-            //view.longDescription = items[itemIndex].longDescription
+            view.shortDescription = items[itemIndex].shortDescription
+            view.longDescription = items[itemIndex].longDescription
             editItem(items[itemIndex])
         }
         

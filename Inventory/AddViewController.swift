@@ -29,12 +29,7 @@ class AddViewController: UIViewController {
     @IBOutlet weak var longDesField: UITextView!
     @objc func handleSave(){
         //set up and call the function specified by the protocol
-        let short: String = shortDesField.text!
-        let long: String = longDesField.text
-        var addItem = Item()
-        addItem.longDescription = long
-        addItem.shortDescription = short
-        delegate.addItem(addItem)
+        delegate.addItem(Item(shortDescription: shortDesField.text!, longDescription: longDesField.text!))
         self.navigationController?.popViewController(animated: true)
     }
 
