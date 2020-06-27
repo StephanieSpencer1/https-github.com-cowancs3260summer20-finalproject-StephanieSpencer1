@@ -32,7 +32,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cell
     }
     
-   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    @IBOutlet weak var tableView: UITableView!
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
           //edit row
           tableView.deselectRow(at: indexPath, animated: true)
           
@@ -61,8 +62,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             let view = segue.destination as! EditViewController
             view.delegate = self
             itemIndex = tableView.indexPathForSelectedRow?.row
-            view.item.shortDescription = items[itemIndex].shortDescription
-            view.item.longDescription = items[itemIndex].longDescription
+            //view.shortDescription = items[itemIndex].shortDescription
+            //view.longDescription = items[itemIndex].longDescription
             editItem(items[itemIndex])
         }
         

@@ -13,10 +13,10 @@ protocol EditItemProtocol{
     func editItem(_ item: Item)
 }
 
-var shortt: String = ""
-var longg: String = ""
+var shortDescription: String = ""
+var longDescription: String = ""
 
-var item = Item(shortDescription: shortt, longDescription: longg)
+//var item = Item(shortDescription: shortt, longDescription: longg)
 
 
 class EditViewController: UIViewController {
@@ -42,10 +42,11 @@ class EditViewController: UIViewController {
     
     @objc func handleSave(){
         //set up and call the function specified by the protocol
-        let shortF: String = shortField.text!
-        let longF: String = longField.text
-        item.longDescription = longF
-        item.shortDescription = shortF
+        shortDescription = shortField.text!
+        longDescription = longField.text
+        var item = Item()
+        item.longDescription = longDescription
+        item.shortDescription = shortDescription
         delegate.editItem(item)
         self.navigationController?.popViewController(animated: true)
        }
